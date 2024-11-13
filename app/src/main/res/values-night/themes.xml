@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DesafiosDoSaber" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:statusBarColor">@color/azulPrincipal</item>
+        <item name="colorControlActivated">@color/azulPrincipal</item>
+    </style>
+    <style name="CustomRadioButtonStyle">
+        <item name="android:buttonTint">@color/azulPrincipal</item>
+    </style>
+    <style name="Theme.DesafiosDoSaber" parent="Base.Theme.DesafiosDoSaber" />
+</resources>

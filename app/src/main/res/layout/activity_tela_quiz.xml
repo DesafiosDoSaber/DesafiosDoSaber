@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaQuiz">
+
+    <TextView
+        android:id="@+id/textoPergunta"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="171dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:text="Pergunta"
+        android:fontFamily="@font/luckiest_guy"
+        android:textColor="@color/azulPrincipal"
+        android:textSize="24sp" />
+
+    <RadioGroup
+        android:id="@+id/opcoesGrupo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="267dp"
+        >
+
+        <RadioButton
+            android:id="@+id/opcao1"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:textSize="24dp"
+            android:textColor="@color/azulPrincipal"
+            android:fontFamily="@font/luckiest_guy"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/tv_border"
+            style="@style/CustomRadioButtonStyle"
+            />
+        <RadioButton
+            android:id="@+id/opcao2"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:textSize="24dp"
+            android:textColor="@color/azulPrincipal"
+            android:fontFamily="@font/luckiest_guy"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/tv_border"
+            android:buttonTint="@color/azulPrincipal"
+            />
+        <RadioButton
+            android:id="@+id/opcao3"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:textSize="24dp"
+            android:textColor="@color/azulPrincipal"
+            android:fontFamily="@font/luckiest_guy"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/tv_border"
+            android:buttonTint="@color/azulPrincipal"
+            />
+        <RadioButton
+            android:id="@+id/opcao4"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:textSize="26dp"
+            android:textColor="@color/azulPrincipal"
+            android:fontFamily="@font/luckiest_guy"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/tv_border"
+            android:buttonTint="@color/azulPrincipal"
+            />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/botaoProxima"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="581dp"
+        android:backgroundTint="@color/azulPrincipal"
+        android:backgroundTintMode="add"
+        android:fontFamily="@font/luckiest_guy"
+        android:gravity="center"
+        android:text="PRÓXIMA"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:enabled="false"
+        />
+
+    <TextView
+        android:id="@+id/textoContadorPergunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="707dp"
+        android:layout_centerHorizontal="true"
+        android:text="1/12"
+        android:fontFamily="@font/luckiest_guy"
+        android:textColor="@color/azulPrincipal"
+        android:textSize="28sp" />
+
+</RelativeLayout>

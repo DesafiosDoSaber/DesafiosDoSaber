@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/campoNomePrincipal"
+        android:fontFamily="@font/luckiest_guy"
+        android:layout_width="279dp"
+        android:layout_height="61dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="365dp"
+        android:background="@drawable/tv_border"
+        android:gravity="center"
+        android:hint="NOME"
+        android:textColorHint="@color/azulFontClaro"
+        android:textColor="@color/azulFontClaro"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/botaoIniciar"
+        android:layout_width="279dp"
+        android:layout_height="61dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="508dp"
+        android:backgroundTint="@color/azulPrincipal"
+        android:backgroundTintMode="add"
+        android:fontFamily="@font/luckiest_guy"
+        android:gravity="center"
+        android:onClick="irTelaJogos"
+        android:text="INICIAR"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        app:srcCompat="@drawable/desafios_do_saber" />
+
+<!--    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="380dp"
+        android:padding="0dp"
+        app:srcCompat="@drawable/group_1" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="384dp"
+        android:padding="0dp"
+        app:srcCompat="@drawable/group_4__4_" />-->
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/group_1__1_" />
+
+
+</RelativeLayout>

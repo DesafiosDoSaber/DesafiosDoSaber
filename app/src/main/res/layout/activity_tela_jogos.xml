@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaJogos">
+
+
+<!--    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="466dp"
+        android:layout_marginTop="380dp"
+        app:srcCompat="@drawable/group_1" />
+
+        <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="384dp"
+        app:srcCompat="@drawable/group_4__4_" />-->
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/group_1__1_" />
+
+
+
+    <Button
+        android:id="@+id/botaoQuiz"
+        android:onClick="irTelaQuiz"
+        android:fontFamily="@font/luckiest_guy"
+        android:layout_width="279dp"
+        android:layout_height="64dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="322dp"
+        android:backgroundTint="@color/azulPrincipal"
+        android:backgroundTintMode="add"
+        android:gravity="center"
+        android:text="QUIZ"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/botaJogoDaVelha"
+        android:fontFamily="@font/luckiest_guy"
+        android:layout_width="279dp"
+        android:layout_height="64dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="423dp"
+        android:backgroundTint="@color/azulPrincipal"
+        android:backgroundTintMode="add"
+        android:gravity="center"
+        android:text="JOGO DA VELHA"
+        android:textColor="@color/white"
+        android:textSize="29sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="176dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/jogos" />
+</RelativeLayout>
