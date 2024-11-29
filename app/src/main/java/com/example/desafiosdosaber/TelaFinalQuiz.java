@@ -30,12 +30,17 @@ public class TelaFinalQuiz extends AppCompatActivity {
         textoParabens.setText("Parabéns " +nomeUsuario+ " você acertou " + porcentagemAcertos + "%");
 
         botaoJogarNovamente.setOnClickListener(v -> {
-            Intent intent = new Intent(TelaFinalQuiz.this, MainActivity.class);
+            Intent intent = new Intent(TelaFinalQuiz.this, EscolhaMateria.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             finish();
         });
 
-        botaoSair.setOnClickListener(v -> finishAffinity());
+        botaoSair.setOnClickListener(v -> {
+            Intent intent = new Intent(TelaFinalQuiz.this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+        });
     }
 }

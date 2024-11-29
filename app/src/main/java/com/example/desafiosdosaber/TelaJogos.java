@@ -24,4 +24,10 @@ public class TelaJogos extends AppCompatActivity {
         intent.putExtra("NOME_USUARIO", nomeUsuario);
         startActivity(intent);
     }
+
+    public void irTelaJogoDaVelha (View view){
+        Intent intent = new Intent(TelaJogos.this, TelaJogadores.class);
+        intent.putExtra("NOME_USUARIO", nomeUsuario);
+        startActivity(intent);
+    }
 }

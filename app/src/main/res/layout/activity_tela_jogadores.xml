@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TelaJogadores">
@@ -14,4 +15,47 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/group_1__1_" />
+
+    <TextView
+        android:id="@+id/campoPrimeiroJogador"
+        android:layout_width="279dp"
+        android:layout_height="61dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="330dp"
+        android:background="@drawable/tv_border_campo_bloqueado"
+        android:fontFamily="@font/luckiest_guy"
+        android:gravity="center"
+        android:hint="JOGADOR 1"
+        android:textColor="@color/azulFontClaro"
+        android:textColorHint="@color/azulFontClaro"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/campoSegundoJogador"
+        android:fontFamily="@font/luckiest_guy"
+        android:layout_width="279dp"
+        android:layout_height="61dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="403dp"
+        android:background="@drawable/tv_border"
+        android:gravity="center"
+        android:hint="JOGADOR 2"
+        android:textColorHint="@color/azulFontClaro"
+        android:textColor="@color/azulFontClaro"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/botaoComecarAJogar"
+        android:layout_width="280dp"
+        android:layout_height="61dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="491dp"
+        android:backgroundTint="@color/azulPrincipal"
+        android:backgroundTintMode="add"
+        android:fontFamily="@font/luckiest_guy"
+        android:gravity="center"
+        android:onClick="irTelaJogos"
+        android:text="COMEÇAR A JOGAR"
+        android:textColor="@color/white"
+        android:textSize="26sp" />
 </RelativeLayout>

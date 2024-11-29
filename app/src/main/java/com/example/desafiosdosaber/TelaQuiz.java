@@ -1,18 +1,16 @@
 package com.example.desafiosdosaber;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import java.util.ArrayList;
 
 public class TelaQuiz extends AppCompatActivity {
     private DatabaseHelper dbHelper;
@@ -20,11 +18,11 @@ public class TelaQuiz extends AppCompatActivity {
     private int perguntaAtual = 0;
     private TextView textPergunta;
     private TextView textoContadorPergunta;
-    private RadioGroup opcoesGrupo;
-    private RadioButton[] opcoes = new RadioButton[4];
+    private Button[] opcoes = new Button[4];
     private Button botaoProxima;
     private int pontuacao = 0;
     private String nomeUsuario;
+    private int opcaoSelecionada = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +33,6 @@ public class TelaQuiz extends AppCompatActivity {
 
         textPergunta = findViewById(R.id.textoPergunta);
         textoContadorPergunta = findViewById(R.id.textoContadorPergunta);
-        opcoesGrupo = findViewById(R.id.opcoesGrupo);
         opcoes[0] = findViewById(R.id.opcao1);
         opcoes[1] = findViewById(R.id.opcao2);
         opcoes[2] = findViewById(R.id.opcao3);
@@ -53,10 +50,16 @@ public class TelaQuiz extends AppCompatActivity {
 
         mostrarPergunta();
 
-        opcoesGrupo.setOnCheckedChangeListener((group, checkedId) -> botaoProxima.setEnabled(true));
+        for (int i = 0; i < opcoes.length; i++) {
+            final int index = i;
+            opcoes[i].setOnClickListener(v -> {
+                if (opcaoSelecionada == -1) {
+                    verificarResposta(index);
+                }
+            });
+        }
 
         botaoProxima.setOnClickListener(v -> {
-            verificarResposta();
             perguntaAtual++;
             if (perguntaAtual < perguntas.size()) {
                 mostrarPergunta();
@@ -67,8 +70,13 @@ public class TelaQuiz extends AppCompatActivity {
     }
 
     private void mostrarPergunta() {
-        opcoesGrupo.clearCheck();
+        opcaoSelecionada = -1;
         botaoProxima.setEnabled(false);
+
+        for (Button botao : opcoes) {
+            botao.setBackgroundResource(R.drawable.botao_quiz);
+            botao.setEnabled(true);
+        }
 
         Pergunta pergunta = perguntas.get(perguntaAtual);
         textPergunta.setText(pergunta.getTextoPergunta());
@@ -91,13 +99,23 @@ public class TelaQuiz extends AppCompatActivity {
         textoContadorPergunta.setText((perguntaAtual + 1) + "/12");
     }
 
-    private void verificarResposta() {
-        int respostaSelecionada = opcoesGrupo.indexOfChild(findViewById(opcoesGrupo.getCheckedRadioButtonId()));
+    private void verificarResposta(int indexSelecionado) {
+        opcaoSelecionada = indexSelecionado;
+        botaoProxima.setEnabled(true);
 
         Pergunta perguntaAtualObj = perguntas.get(perguntaAtual);
         int corretaIndex = perguntaAtualObj.getNovaPosicaoCorreta();
 
-        if (respostaSelecionada == corretaIndex) {
+        for (int i = 0; i < opcoes.length; i++) {
+            if (i == corretaIndex) {
+                opcoes[i].setBackgroundResource(R.drawable.botao_quiz_correto);
+            } else if (i == opcaoSelecionada) {
+                opcoes[i].setBackgroundResource(R.drawable.botao_quiz_errado);
+            }
+            opcoes[i].setEnabled(false);
+        }
+
+        if (opcaoSelecionada == corretaIndex) {
             pontuacao++;
         }
     }

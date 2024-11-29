@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaJogoDaVelha">
+
+        <TextView
+            android:id="@+id/campoPrimeiroJogador"
+            android:layout_width="308dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="59dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_jogador_selecionado"
+            android:fontFamily="@font/luckiest_guy"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dp"
+            android:hint="JOGADOR 1"
+            android:textColor="@color/azulFontClaro"
+            android:textColorHint="@color/azulFontClaro"
+            android:textSize="25sp"/>
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ellipse_1"
+            android:layout_marginTop="68dp"
+            android:layout_marginLeft="300dp"
+            />
+
+    <TextView
+        android:id="@+id/campoSegundoJogador"
+        android:layout_width="308dp"
+        android:layout_height="54dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp"
+        android:background="@drawable/bg_jogador_deselecionado"
+        android:fontFamily="@font/luckiest_guy"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:hint="JOGADOR 2"
+        android:textColor="@color/azulFontClaro"
+        android:textColorHint="@color/azulFontClaro"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/jogador_2"
+        android:layout_marginTop="137dp"
+        android:layout_marginLeft="300dp"
+        />
+
+    <TextView
+        android:id="@+id/textoPerguntaQuizJogoDaVelha"
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="204dp"
+        android:textSize="24sp"
+        android:fontFamily="@font/luckiest_guy"
+        android:textColor="@color/azulPrincipal"
+        android:text="A CONSTRUÇÃO DA TORRE EIFFEL FOI CONCLUÍDA EM 31 DE MARÇO DE 1890"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaoVerdadeiro"
+        android:layout_width="308dp"
+        android:layout_height="54dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="320dp"
+        android:background="@drawable/botao_quiz"
+        android:fontFamily="@font/luckiest_guy"
+        android:gravity="center"
+        android:hint="VERDADEIRO"
+        android:textColorHint="@color/azulPrincipal"
+        android:textSize="25sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaoFalso"
+        android:layout_width="308dp"
+        android:layout_height="54dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="378dp"
+        android:background="@drawable/botao_quiz"
+        android:fontFamily="@font/luckiest_guy"
+        android:gravity="center"
+        android:hint="FALSO"
+        android:textColorHint="@color/azulPrincipal"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/group_20"
+        android:layout_marginTop="453dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <GridLayout
+        android:id="@+id/gridJogoVelha"
+        android:background="@drawable/celula_jogo_da_velha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:layout_marginTop="470dp"
+        android:layout_centerHorizontal="true"
+    >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button0"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@drawable/celula_jogo_da_velha"
+            android:text=""
+            android:textColor="@color/white"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="60sp"
+            android:layout_margin="4dp"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button1"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@drawable/celula_jogo_da_velha"
+            android:text=""
+            android:textColor="@color/white"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="60sp"
+            android:layout_margin="4dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button2"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@drawable/celula_jogo_da_velha"
+            android:text=""
+            android:textColor="@color/white"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="60sp"
+            android:layout_margin="4dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button3"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@drawable/celula_jogo_da_velha"
+            android:text=""
+            android:textColor="@color/white"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="60sp"
+            android:layout_margin="4dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button4"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@drawable/celula_jogo_da_velha"
+            android:text=""
+            android:textColor="@color/white"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="60sp"
+            android:layout_margin="4dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button5"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@drawable/celula_jogo_da_velha"
+            android:text=""
+            android:textColor="@color/white"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="60sp"
+            android:layout_margin="4dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button6"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@drawable/celula_jogo_da_velha"
+            android:text=""
+            android:textColor="@color/white"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="60sp"
+            android:layout_margin="4dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button7"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@drawable/celula_jogo_da_velha"
+            android:text=""
+            android:textColor="@color/white"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="60sp"
+            android:layout_margin="4dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button8"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@drawable/celula_jogo_da_velha"
+            android:text=""
+            android:textColor="@color/white"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="60sp"
+            android:layout_margin="4dp" />
+    </GridLayout>
+
+
+</RelativeLayout>

@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="azulPrincipal">#006691</color>
     <color name="azulFontClaro">#76A0B1</color>
+    <color name="fundoBloqueado">#E1E1E1</color>
 </resources>

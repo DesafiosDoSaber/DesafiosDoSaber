@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaFinalQuiz">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/group_1__1_" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="239dp"
+        android:layout_centerHorizontal="true"
+        android:text="VENCEDOR!"
+        android:fontFamily="@font/luckiest_guy"
+        android:textColor="@color/azulPrincipal"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/textoVencedorJogoDaVelha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="356dp"
+        android:layout_centerHorizontal="true"
+        android:text="JOGADOR VENCEDOR"
+        android:fontFamily="@font/luckiest_guy"
+        android:textColor="@color/azulPrincipal"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/botaoJogarNovamenteJogo"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="488dp"
+        android:backgroundTint="@color/azulPrincipal"
+        android:backgroundTintMode="add"
+        android:fontFamily="@font/luckiest_guy"
+        android:gravity="center"
+        android:text="JOGAR NOVAMENTE"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/botaoSairJogo"
+        android:layout_width="194dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="568dp"
+        android:backgroundTint="@color/azulPrincipal"
+        android:backgroundTintMode="add"
+        android:fontFamily="@font/luckiest_guy"
+        android:gravity="center"
+        android:text="SAIR"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+</RelativeLayout>
